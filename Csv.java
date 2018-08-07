@@ -3,6 +3,8 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.sql.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 class CsvReader {
 
@@ -38,7 +40,7 @@ public static boolean isValid(String email)
                                                   +sql[2]+","+sql[3]+","+sql[4]
                                                         +","+sql[5]+","+sql[6]+","+sql[7]+");";
 
-		if(isValid(sql[5]);
+		if(isValid(sql[5]));
 		else
 		{
 			System.out.println("Plz Enter Valid Email");
