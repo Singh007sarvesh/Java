@@ -6,6 +6,18 @@ import java.sql.*;
 
 class CsvReader {
 
+public static boolean isValid(String email)
+    {
+        String emailRegex = "^[a-zA-Z0-9_+&*-]+(?:\\."+
+                            "[a-zA-Z0-9_+&*-]+)*@" +
+                            "(?:[a-zA-Z0-9-]+\\.)+[a-z" +
+                            "A-Z]{2,7}$";
+                             
+        Pattern pat = Pattern.compile(emailRegex);
+        if (email == null)
+            return false;
+        return pat.matcher(email).matches();
+    }
     public static void main(String[] args) throws Exception{
 
         String csvFile = "employee1.csv";
@@ -25,6 +37,13 @@ class CsvReader {
                 String query = "insert into employee values("+sql[0]+","+sql[1]+","
                                                   +sql[2]+","+sql[3]+","+sql[4]
                                                         +","+sql[5]+","+sql[6]+","+sql[7]+");";
+
+		if(isValid(sql[5]);
+		else
+		{
+			System.out.println("Plz Enter Valid Email");
+			return;
+		}
                 System.out.println(query);
 
                 stmt.executeUpdate(query);
