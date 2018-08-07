@@ -36,7 +36,7 @@ public static boolean isValid(String email)
 
                 // use comma as separator
                 String[] sql = line.split(cvsSplitBy);
-                String query = "insert into employee values("+sql[0]+","+sql[1]+","
+                String query = "insert into emp_records values("+sql[0]+","+sql[1]+","
                                                   +sql[2]+","+sql[3]+","+sql[4]
                                                         +","+sql[5]+","+sql[6]+","+sql[7]+");";
 
